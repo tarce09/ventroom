@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <title>Ventroom</title>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column is-6 is-offset-3 mb-6">
+                    <section class="hero is-primary">
+                        <div class="hero-body">
+                            <p class="title">
+                                Ventroom
+                            </p>
+                            <p class="subtitle">
+                                A simple chat built with Django, Channels and Redis
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="column is-6 is-offset-3">
+                    <div class="box">
+                        <div id="chat-messages"></div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Message" id="chat-message-input">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <a class="button is-info" id="chat-message-submit">Submit</a>
+                        </div>
+                    </div>
+
+                    <small class="has-text-grey-light">Your username: {{ username }}</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{room_name | json_script:"json-roomname"}}
+    {{username| json_script:"json-username"}}
+
+    <script>
+        const userName = JSON.parse(document.getElementById('json-username').textContent)
+        const roomName = JSON.parse(document.getElementById('json-roomname').textContent)
+        
+    </script>
+</body>
+</html>
