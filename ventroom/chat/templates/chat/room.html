@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <title>Ventroom</title>
+    <title>Foxxie chat</title>
     <link rel="stylesheet" href="{% static "back.css" %}"/>
     <link rel="stylesheet" href="{% static "transition.css" %}"/>
     <link rel="stylesheet" href="{% static "media.css" %}"/>
@@ -63,6 +63,7 @@
   
     </section>
 </header>
+<div class="" id="prompt"></div>
     <section class="section-chat">
         <div class="container">
                 <div class="column is-8 is-offset-2 mb-2">
@@ -86,7 +87,6 @@
                         <br> {{ m.content }}<br>
                         </div>
                         {% endfor %}
-                        <hr />
                         </div>
                     </div>
                     </div>
@@ -134,8 +134,17 @@
             const data = JSON.parse(e.data)
 
             if(data.message){
-                document.querySelector('#chat-messages').innerHTML += ('<b>' + "sentiment: " + data.sentiment +" " + data.username + '</b> : ' + data.message +'<br>')
-
+                document.querySelector('#chat-messages').innerHTML += ('<div class="msgbox"><span class="name"><b>'+ data.username +'</b></span><br>'+ data.message +'<br></div>')
+                if(data.sentiment=="neg")
+                {
+                    document.getElementById("prompt").classList.add("prompt")
+                    document.getElementById("prompt").innerHTML ='Is every thing ok '+ data.username +' <i class="fas fa-smile-beam"></i>'
+                }
+                else if(data.sentiment=="pass")
+                {
+                    document.getElementById("prompt").classList.remove("prompt")
+                    document.getElementById("prompt").innerHTML =" "
+                }
             }else{
                 alert('Message is empty')
             }
