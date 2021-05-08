@@ -1,5 +1,6 @@
-# ventroom
-Anonymous Chat room using ASGI
+# Foxxie
+Anonymous Chat room using ASGI with profanity filter and sentiment analyzer.
+The main purpose is to provide a safe space for people to vent their emotions out. Our goal is to help achieve a better future in the field of mental health.
 
 
 1. Install [Docker](https://docs.docker.com/get-docker/)
