@@ -53,8 +53,8 @@
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a onclick="homeFunc()" href="/home" id="home">Home</a></li>
-        <li><a href="/" onclick="chatFunc()" id="chat">Chat</a></li>
+        <li><a onclick="homeFunc()" href="/" id="home">Home</a></li>
+        <li><a href="/chat" onclick="chatFunc()" id="chat">Chat</a></li>
       </ul>
     </nav>
     <header>
@@ -112,11 +112,11 @@
     
             function homeFunc()
         {
-            window.location.href="/home";
+            window.location.href="/";
         }
             function chatFunc()
         {
-            window.location.href="/";
+            window.location.href="/chat";
         }
         const userName = JSON.parse(document.getElementById('json-username').textContent)
         const roomName = JSON.parse(document.getElementById('json-roomname').textContent)
