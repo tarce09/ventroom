@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } 
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+}
+
+nav{
+    top: 0;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 100px;
+    position: fixed;
+    z-index: 100;
+    transition: 0.5s ease-in-out;
+  }
+  nav .imgicon
+{
+  transform: translate(-5px,0px);
+  height: 40px;
+  width: 40px;
+}
+  nav .logo{
+    color: #000;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+  }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: #fff;
+    background: #000;
+  }
+  nav .menu-btn i{
+    color: #000;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  .sticky
+  {
+      background-color: #fff;
+      height: 100px;
+      box-shadow: 0 8px 7px -10px black;
+  }
+
+  
+  .form
+  {
+    transform: translateY(27vh);
+  }
+  .section
+  {
+    margin: 10px 120px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .fox
+  {
+    margin-top: 40px;
+    margin-left: 20%;
+    transition: 0.5s;
+    transform: scale(1.35);
+  }
+  .rules
+  {
+    justify-content: center;
+    align-items: center;
+  }
+  .rules .conainer
+  {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 20px;
+  }
+
+
+  .rules .box
+  {
+    height: 100px;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .ruleshead
+  {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+    opacity: 1;
+    transition: 0.6s;
+  }
+@keyframes anim1
+{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  .red
+  {
+    color: rgb(255, 20, 20);
+  }
+
+
+header
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(5246024.jpg);
+    background-size: cover;
+    box-shadow: 
+    inset 0px -11px 20px -15px #000; 
+}
+.chatroom header
+{
+  position: fixed;
+}
+.chatroom header .black
+{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url(5246024.jpg);
+  filter        : blur(1px);
+  opacity: 1;
+
+}
+.top .title
+{
+  color: #000;
+  font-size: 40px;
+  font-weight: 600;
+}
+.section-chat .box{
+  width: 100%;
+  background: url(5246024.jpg);
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* 12345678901234567890 */
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #81c644;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+  margin-top: 80px;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background:linear-gradient(135deg, #f794a4 0%,#fdd6bd 100%);
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #000;  
+  position: relative;
+  border-radius: 20px;
+  
+  box-shadow: 0 8px 7px -10px black;
+}
+
+.team .team_member h3{
+  color: #000;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+
+
+.team .team_member .team_img{
+  color: #000;
+  position: absolute;
+  font-size: 90px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 200px;
+  height: 100px;
+  padding: 6px;
+}
+.section-chat
+{
+  transform: translateY(80px);
+  border-radius: 20px;
+}
+header #help
+{
+    position: absolute;
+    top:70%;
+    left:5px;
+    transform: translate(-5px,-70%);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 20px 20px;
+    transition: 0.5s;
+    color: #000;
+}
+header .box
+{
+    position: absolute;
+    top:70%;
+    left:5px;
+    transform: translate(-5px,-70%);
+    background-color: #fff;
+    padding: 35px 15px;
+    transition: 0.5s;
+
+}
+.fullChat
+{
+  z-index: 300;
+}
+.fullChat:hover #help
+{
+    left: 13px;
+    transform: translate(50px.50px);
+    background-color: #1b1b1b;
+    color:#fff;
+}
+.fullChat:hover .box
+{
+    padding: 31.5px 20px;
+    background-color: #1b1b1b;
+}
+.field .back
+{
+  margin-left: 30px;
+  right: 0;
+}
+
+
+
+
+
+.box1 select {
+  margin: 10px;
+  background-color: #248be0;
+  color: white;
+  padding: 7px;
+  width: 130px;
+  border: none;
+  font-size: 14px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.box1::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box1:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box1 select option {
+  padding: 30px;
+}

@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from .models import Message
 # Create your views here.
+def home(request):
+    return render(request,'chat/home.html')
+
 def index(request):
-    return render(request,'chat/index.html')
+    return render(request,'chat/chat.html')
 
 def room(request, room_name):
     username = request.GET.get('username','Anonymous')
