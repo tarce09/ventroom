@@ -134,7 +134,7 @@
             const data = JSON.parse(e.data)
 
             if(data.message){
-                document.querySelector('#chat-messages').innerHTML += ('<b>' + data.username + '</b> : ' + data.message +'<br>')
+                document.querySelector('#chat-messages').innerHTML += ('<b>' + "sentiment: " + data.sentiment +" " + data.username + '</b> : ' + data.message +'<br>')
 
             }else{
                 alert('Message is empty')

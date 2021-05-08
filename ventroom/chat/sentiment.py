@@ -12,4 +12,4 @@ def fetch_sentiment(sentence):
         
     
 
-print(fetch_sentiment("I am very sad and not happy"))
+#print(fetch_sentiment("I am very sad and not happy"))

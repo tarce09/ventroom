@@ -6,6 +6,6 @@ class Message(models.Model):
     room = models.CharField(max_length=225)
     content = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
-
+    sentiment = models.CharField(max_length=10,default="pass")
     class Meta:
         ordering = ('date_added',)
