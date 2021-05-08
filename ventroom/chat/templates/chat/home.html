@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static "style.css" %}"/>
+        <link rel="stylesheet" href="{% static "transition.css" %}"/>
+        <link rel="stylesheet" href="{% static "media.css" %}"/>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <div class="transition trans-1 is-active"></div>
+    <nav class="">
+      <div class="logo"><img src="{% static "fox.png" %}" class="imgicon"></img> Foxxie</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="/home" id="home">Home</a></li>
+        <li><a href="/" id="chat">Chat</a></li>
+      </ul>
+    </nav>
+
+        <header>
+        
+            <div class="title">
+            <h1>FOXXIE</h1>
+            <h1>FOXXIE</h1>
+            <h1>FOXXIE</h1>
+            <img src="{% static "fox.png" %}" class="titleicon"></img>
+            <div class="tagline"> Making lives <span>happier</span> </div>
+            </div>
+            <a class="chaticon" href="/">Chat</a>
+            <div class="fullChat" id="fullChat">
+            <div class="box"></div>
+            <span href="" id="help"><i class="fas fa-hands-helping"></i></span>
+            </div>
+            <div class="helpline dispnone" id="helpline">
+            Helpline Numbers:<hr /><br>
+            Jeevan Aastha Helpline : 1800 233 3330<br>
+            AASRA : 09820466726 <br>
+            VANDRAVELA FOUNDATION : 18602662345 
+            </div>
+        </header>
+        
+    </body>
+    
+    <script src="{% static "script.js" %}"></script>
+    <script src="{% static "trans.js" %}"></script>
+</html>
