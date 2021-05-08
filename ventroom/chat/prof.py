@@ -1,4 +1,3 @@
-!pip install better-profanity
 
 from better_profanity import profanity
 

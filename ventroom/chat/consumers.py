@@ -3,7 +3,7 @@ import json
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from asgiref.sync import sync_to_async
 from .models import Message
-
+from .prof import prof_filter
 class ChatConsumer(AsyncJsonWebsocketConsumer):
     async def connect(self):
         self.room_name = self.scope ['url_route']['kwargs']['room_name']
@@ -27,6 +27,8 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
     async def receive(self, text_data):
         data = json.loads(text_data)
         message = data['message']
+        #apply profanity filter to the message
+        message = prof_filter(message)
         username = data['username']
         room = data['room']
 
@@ -43,6 +45,8 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
 
     async def chat_message(self, event):
         message = event['message']
+        #apply profanity filter to message 
+        message = prof_filter(message)
         username = event['username']
 
         # Send message to WebSocket
