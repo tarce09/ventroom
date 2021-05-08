@@ -29,8 +29,9 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
         data = json.loads(text_data)
         message = data['message']
         #apply profanity filter to the message
-        message = prof_filter(message)
+        
         sentiment = fetch_sentiment(message)
+        message = prof_filter(message)
         sentiment = str(sentiment)
         
 
